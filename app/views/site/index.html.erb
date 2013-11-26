@@ -1,0 +1,22 @@
+<script id="venues-template" type="text/x-handlebars-template">
+  <ul class="venue-links">
+    {{#each venues}}
+      <li data-id="{{id}}">{{name}}</li>
+    {{/each}}
+  </ul>
+</script>
+
+<script id="events-template" type="text/x-handlebars-template">
+  {{#each events}}
+    <header>
+      <h1>{{title}}</h1>
+    </header>
+    <p>{{body}}</p>
+    <footer>
+      <p>{{created_at}}</p>
+      <p class="venues-path">All venues</p>
+    </footer>
+  {{/each}}
+</script>
+
+<section id="output"></section>
